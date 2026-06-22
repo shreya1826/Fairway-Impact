@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
+
+// inside the <body>, add <Toaster /> anywhere:
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -21,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${display.variable} ${body.variable} ${mono.variable} font-body bg-cream text-ink antialiased`}>
         {children}
+        <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
       </body>
     </html>
   );
