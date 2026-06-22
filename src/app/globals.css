@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* signature "ripple" motif — used behind the hero and around number balls */
+.ripple-ring {
+  position: absolute;
+  border: 1px solid rgba(255, 107, 74, 0.25);
+  border-radius: 9999px;
+}
+
+.number-ball {
+  font-family: var(--font-mono);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  background: #101820;
+  color: #FBF7F0;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #FF6B4A;
+  outline-offset: 2px;
+}
