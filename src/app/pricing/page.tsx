@@ -22,10 +22,7 @@ export default function PricingPage() {
               <li>• Cancel anytime</li>
             </ul>
             <div className="mt-8">
-              <SubscribeButton
-                priceId={process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID || "monthly"}
-                label="Subscribe Monthly"
-              />
+              <SubscribeButton plan="monthly" />
             </div>
           </div>
           <div className="rounded-2xl border-2 border-coral bg-white p-8">
@@ -37,11 +34,9 @@ export default function PricingPage() {
               <li>• Locked-in rate for the year</li>
             </ul>
             <div className="mt-8">
-              <SubscribeButton
-                priceId={process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID || "yearly"}
-                label="Subscribe Yearly"
-              />
-            </div>          </div>
+              <SubscribeButton plan="yearly" />
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
