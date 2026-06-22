@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Charity } from "@/types/database";
 
 export default function CharityCard({ charity }: { charity: Charity }) {
   return (
-    <div className="group overflow-hidden rounded-2xl border border-ink/10 bg-white transition hover:-translate-y-1 hover:shadow-lg">
+    <Link href={`/charities/${charity.id}`} className="group overflow-hidden rounded-2xl border border-ink/10 bg-white transition hover:-translate-y-1 hover:shadow-lg block">
       <div className="relative h-40 w-full bg-moss/10">
         {charity.image_url && (
           <Image src={charity.image_url} alt={charity.name} fill className="object-cover" />
@@ -18,6 +19,6 @@ export default function CharityCard({ charity }: { charity: Charity }) {
         <h3 className="font-display text-lg font-semibold">{charity.name}</h3>
         <p className="mt-1 text-sm text-ink/70 line-clamp-3">{charity.description}</p>
       </div>
-    </div>
+    </Link>
   );
 }
