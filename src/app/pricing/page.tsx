@@ -23,7 +23,7 @@ export default function PricingPage() {
             </ul>
             <div className="mt-8">
               <SubscribeButton
-                priceId={process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID!}
+                priceId={process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID || "monthly"}
                 label="Subscribe Monthly"
               />
             </div>
@@ -38,7 +38,7 @@ export default function PricingPage() {
             </ul>
             <div className="mt-8">
               <SubscribeButton
-                priceId={process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID!}
+                priceId={process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID || "yearly"}
                 label="Subscribe Yearly"
               />
             </div>          </div>
