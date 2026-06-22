@@ -21,7 +21,12 @@ export default function PricingPage() {
               <li>• 10%+ goes to your chosen charity</li>
               <li>• Cancel anytime</li>
             </ul>
-            <div className="mt-8"><SubscribeButton plan="monthly" /></div>
+            <div className="mt-8">
+              <SubscribeButton
+                priceId={process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID!}
+                label="Subscribe Monthly"
+              />
+            </div>
           </div>
           <div className="rounded-2xl border-2 border-coral bg-white p-8">
             <h2 className="font-display text-2xl font-semibold">Yearly <span className="text-sm font-normal text-coral">Best value</span></h2>
@@ -31,8 +36,12 @@ export default function PricingPage() {
               <li>• ~2 months free vs. paying monthly</li>
               <li>• Locked-in rate for the year</li>
             </ul>
-            <div className="mt-8"><SubscribeButton plan="yearly" /></div>
-          </div>
+            <div className="mt-8">
+              <SubscribeButton
+                priceId={process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID!}
+                label="Subscribe Yearly"
+              />
+            </div>          </div>
         </div>
       </main>
       <Footer />
