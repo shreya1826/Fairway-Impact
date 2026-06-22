@@ -57,10 +57,7 @@ Once subscribed and with scores entered, your dashboard shows your draw status f
 
 To see the admin side, use these credentials:
 
-> **Email:** `admin@fairwayimpact.com`
-> **Password:** `Admin@1234`
-
-Or ask the submitter to promote your own account.
+Ask the submitter to promote your own account.
 
 Once logged in as admin, visit **/admin** from the nav.
 
